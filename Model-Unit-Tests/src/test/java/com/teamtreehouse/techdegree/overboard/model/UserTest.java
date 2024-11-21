@@ -70,7 +70,7 @@ public class UserTest {
     @Test
     public void userCannotDownvoteTheirOwnQuestion() throws Exception {
         thrown.expect(VotingException.class);
-        thrown.expectMessage("You cannot downvote for yourself!");
+        thrown.expectMessage("You cannot vote for yourself!");
 
         user1.downVote(question);
 
@@ -92,7 +92,7 @@ public class UserTest {
     @Test
     public void userCannotDownvoteTheirOwnAnswer() throws Exception {
         thrown.expect(VotingException.class);
-        thrown.expectMessage("You cannot downvote for yourself!");
+        thrown.expectMessage("You cannot vote for yourself!");
 
         user2.downVote(answer);
 
